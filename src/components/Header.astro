@@ -1,0 +1,34 @@
+---
+const locale = Astro.currentLocale;
+const { langToggleUrl } = Astro.props;
+const navItems = locale === "de"
+  ? [
+      { href: "/", label: "Start" },
+      { href: "/produkte", label: "Produkte" },
+      { href: "/ueber-uns", label: "Über uns" },
+      { href: "/faq", label: "FAQ" },
+      { href: "/kontakt", label: "Kontakt" }
+    ]
+  : [
+      { href: "/en", label: "Home" },
+      { href: "/en/products", label: "Products" },
+      { href: "/en/about", label: "About us" },
+      { href: "/en/faq", label: "FAQ" },
+      { href: "/en/contact", label: "Contact" }
+    ];
+const toggleLabel = locale === "de" ? "EN" : "DE";
+---
+<header>
+  <div class="logo">
+    <img src="/logo-taosun.png" alt="Taosun Logo" />
+    <strong>Taosun GmbH</strong>
+  </div>
+  <nav>
+    <ul>
+      {navItems.map(item => <li><a href={item.href}>{item.label}</a></li>)}
+    </ul>
+  </nav>
+  <div class="lang-toggle">
+    <a href={langToggleUrl}>{toggleLabel}</a>
+  </div>
+</header>

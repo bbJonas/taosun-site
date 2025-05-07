@@ -1,11 +1,16 @@
 {
   "name": "taosun-site",
-  "version": "1.0.0",
-  "description": "Taosun GmbH Website",
-  "main": "index.js",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "astro": "^5.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
 }
