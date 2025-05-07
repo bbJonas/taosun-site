@@ -15,7 +15,7 @@ jobs:
       # 2. PNPM installieren
       - uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 10.10.0
 
       # 3. Abhängigkeiten installieren & Astro‑Build
       - name: Install deps & build
