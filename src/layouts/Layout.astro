@@ -1,0 +1,28 @@
+---
+import "../styles/global.css";   // <‑‑ Tailwind‐CSS importieren
+const { title } = Astro.props;
+---
+
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title} | Taosun</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header>
+      <img src="/assets/taosun_logo.png" alt="Taosun Logo" class="logo" />
+      <nav>
+        <a href="/">Start</a>
+        <a href="/produkte">Produkte</a>
+        <a href="/kontakt">Kontakt</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <p>© 2025 Taosun GmbH – Alle Rechte vorbehalten.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Sungrow 8KTL-M1",
+    "description": "Wechselrichter für 8kWp – dreiphasig, inkl. DC-Schalter",
+    "price": 749,
+    "available": 12,
+    "slug": "sungrow-8ktl",
+    "imageCount": 3
+  },
+  {
+    "name": "Huawei SUN2000-5KTL",
+    "description": "Kompakter 5kW Wechselrichter für mittlere Anlagen",
+    "price": 639,
+    "available": 10,
+    "slug": "huawei-5ktl",
+    "imageCount": 2
+  },
+  {
+    "name": "DEHNcube Überspannungsschutz",
+    "description": "Typ 2+3, für AC & DC Anwendungen geeignet",
+    "price": 119,
+    "available": 35,
+    "slug": "dehn-cube",
+    "imageCount": 1
+  }
+]
