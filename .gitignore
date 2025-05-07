@@ -1,0 +1,35 @@
+# Astro & Build
+.astro/
+dist/
+.server/
+client/
+
+# Abhängigkeiten
+node_modules/
+
+# Umgebungsvariablen
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Betriebssystem-Spuren
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test-Coverage
+coverage/
+.nyc_output/
+
+# Optional (nur bei Bedarf dekommentieren):
+# .github/workflows/*.yml  # Nur wenn du Workflow-Dateien nicht versionieren willst
+# pnpm-debug.log*
