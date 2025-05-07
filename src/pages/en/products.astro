@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+const productEntries = Object.values(import.meta.glob("../../content/products/en/*.md", { eager: true }));
+const categories = ["Solar Modules", "Inverters", "Lightning Protection"];
+const title = "Products";
+const langToggleUrl = "/produkte";
+---
+<BaseLayout {title} {langToggleUrl}>
+  <h1>Our Products</h1>
+  {categories.map(cat => (
+    <section>
+      <h2>{cat}</h2>
+      <div class="product-list">
+        {productEntries.filter(p => p.frontmatter.category === cat)
+                       .map(p => (
+          <div class="product">
+            <h3>{p.frontmatter.title}</h3>
+            <p>{p.frontmatter.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+</BaseLayout>

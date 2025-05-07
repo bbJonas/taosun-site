@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "public/uploads"
+public_folder: "/uploads"
+collections:
+  - name: "products_de"
+    label: "Produkte (DE)"
+    folder: "src/content/products/de"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Produktname", name: "title", widget: "string"}
+      - {label: "Kategorie", name: "category", widget: "string", default: "Solarmodule"}
+      - {label: "Beschreibung", name: "description", widget: "string"}
+      - {label: "Text", name: "body", widget: "markdown"}
+  - name: "products_en"
+    label: "Products (EN)"
+    folder: "src/content/products/en"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Category", name: "category", widget: "string", default: "Solar Modules"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
