@@ -1,0 +1,38 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches: [ main ]  # Action wird bei jedem Push auf den main-Branch ausgelöst
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Code auschecken
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. PNPM installieren
+      - name: Install PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      # 3. Abhängigkeiten installieren & Build
+      - name: Install Dependencies and Build
+        run: |
+          pnpm install
+          pnpm run build
+
+      # 4. Deployment via FTP
+      - name: Deploy to Webgo
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}   # s135.goserver.host
+          username: ${{ secrets.FTP_USERNAME }} # web67f1
+          password: ${{ secrets.FTP_PASSWORD }} # Y0do9fzFI8BJ0L3h
+          port: ${{ secrets.FTP_PORT }}        # 21
+          protocol: ftp                        # oder "ftps" falls nötig
+          local-dir: dist/                     # Astro-Build-Ordner
+          server-dir: /html/taosun/     # Zielpfad auf dem Server
+          dangerous-clean-slate: true          # Löscht veraltete Dateien
