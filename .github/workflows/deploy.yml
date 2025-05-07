@@ -27,7 +27,7 @@ jobs:
       - name: Deploy to Webgo
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          server:   ${{ secrets.FTP_SERVER }}   # z. B. s135.goserver.host
+          server:   ${{ secrets.FTP_HOST }}   # z. B. s135.goserver.host
           username: ${{ secrets.FTP_USERNAME }} # web67f1
           password: ${{ secrets.FTP_PASSWORD }}
           port:     ${{ secrets.FTP_PORT }}     # 21
