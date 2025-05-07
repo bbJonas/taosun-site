@@ -33,6 +33,6 @@ jobs:
           port:     ${{ secrets.FTP_PORT }}     # 21
           protocol: ftp                         # ggf. ftps
           local-dir: dist/
-          server-dir: /html/taosun/             # Ihr Webroot‑Unterordner
+          server-dir: /html/             # Ihr Webroot‑Unterordner
           dangerous-clean-slate: true           # löscht Alt‑Dateien
  
