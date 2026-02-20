@@ -1,18 +1,29 @@
-# taosun-site
+# Taosun Website (statische Version)
 
-Static website for Taosun GmbH.
+Dieses Repository enthält die aktuelle Version der Website von **Taosun GmbH** als **statische Dateien** (HTML/CSS/JS + Assets).
+Deployment erfolgt aktuell **manuell per FTP** (selektiver Upload).
 
-## Project structure
-- `index.html`: Landing page
-- `impressum.html`: Legal notice
-- `style.css`: Stylesheet
-- `script.js`: Frontend behavior
-- `images/`: Product and installation assets
-- `taosun-logo.png`: Brand logo
-- `docs/`: Internal documentation (BRAND/SEO/ARCHITECTURE/TASKS + docs README)
+## Struktur
+- `index.html` – Startseite
+- `impressum.html` – Impressum
+- `style.css` – Styles
+- `script.js` – JavaScript
+- `images/` – Bilder/Assets
+- `docs/` – Brand, SEO, Architektur, Tasks (nicht für Deployment gedacht)
 
-## Local preview
-Open `index.html` with a local static server (for example VS Code Live Server).
+## Lokal testen (Standard)
+Wir nutzen in VS Code die Extension **Live Server**:
+1. Extension installieren: “Live Server” (Ritwick Dey)
+2. `index.html` öffnen
+3. unten rechts “Go Live” klicken
 
-## Deployment
-Upload only deployable site files (`index.html`, `impressum.html`, `style.css`, `script.js`, `images/`, `taosun-logo.png`). Exclude dev/docs metadata (`.git/`, `.github/`, `docs/`).
+## Deployment (aktuell, manuell per FTP)
+Auf den Webspace hochladen:
+- `index.html`, `impressum.html`, `style.css`, `script.js`, `images/`, `taosun-logo.png`
+
+Nicht hochladen:
+- `.git/`, `.github/`, `docs/`
+
+## Git-Regeln
+- `main` ist die Quelle der Wahrheit (entspricht dem Live-Stand).
+- Änderungen in kleinen, klaren Commits.
