@@ -1,129 +1,288 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Taosun GmbH – Photovoltaikhandel</title>
-
-  <!-- SEO / Social -->
-  <meta name="description" content="Photovoltaik-Module, Wechselrichter & Zubehör – Taosun GmbH, Ammersbek" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-
+  <title>Taosun GmbH | Solartechnik-Handel mit klarer Abwicklung</title>
+  <meta name="description" content="Taosun GmbH liefert Solarmodule, Wechselrichter und Zubehör mit transparenter Verfügbarkeit, klarer Kommunikation und fairen Konditionen." />
+  <meta property="og:title" content="Taosun GmbH | Solartechnik-Handel mit klarer Abwicklung" />
+  <meta property="og:description" content="Photovoltaik-Komponenten aus Lagerbeständen und Restposten. Preis und Verfügbarkeit unkompliziert anfragen." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="taosun-logo.png" />
+  <meta name="theme-color" content="#1f4d68" />
+  <link rel="icon" href="taosun-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
 </head>
 <body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <p>Taosun GmbH · PV-Komponentenhandel aus Ammersbek</p>
+      <a href="mailto:info@taosun.de">info@taosun.de</a>
+    </div>
+  </div>
+
   <header class="navbar" aria-label="Hauptnavigation">
     <div class="container nav-inner">
-      <a href="#hero" class="logo" aria-label="Startseite">
-        <img src="taosun-logo.png" alt="" /> <span>Taosun&nbsp;GmbH</span>
+      <a href="#start" class="logo" aria-label="Startseite">
+        <img src="taosun-logo.png" alt="Taosun Logo" />
+        <span>Taosun GmbH</span>
       </a>
-      <nav class="nav-links" role="navigation">
-        <a href="#hero">Start</a>
-        <a href="#about">Über&nbsp;uns</a>
-        <a href="#offers">Angebote</a>
-        <a href="#contact">Kontakt</a>
+
+      <button class="nav-toggle" type="button" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="primary-nav" class="nav-links" role="navigation">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#angebote">Produkte</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontakt">Kontakt</a>
         <a href="impressum.html">Impressum</a>
+        <a class="btn btn-nav" href="#kontakt">Anfrage senden</a>
       </nav>
     </div>
   </header>
 
-  <section id="hero" class="hero" aria-labelledby="hero-heading">
-    <div class="hero-content container">
-      <h1 id="hero-heading">Solartechnik für Macher.</h1>
-      <p>Solarmodule, Wechselrichter und Zubehör – schnell, zuverlässig und zum fairen Preis.</p>
-      <div class="hero-ctas">
-        <a href="#offers" class="btn-cta">Aktuelle Angebote</a>
-        <a href="#contact" class="btn-secondary btn-ghost">Anfrage senden</a>
-      </div>
-      <div class="proof-chips" aria-label="Unternehmensdaten">
-        <span class="proof-chip">Taosun GmbH</span>
-        <span class="proof-chip">Ammersbek</span>
-        <span class="proof-chip">Seit 2022</span>
-        <span class="proof-chip">HRB 22349 HL</span>
-        <span class="proof-chip">Rückmeldung i.d.R. innerhalb von 24h</span>
-      </div>
-    </div>
-  </section>
+  <main>
+    <section id="start" class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Photovoltaikhandel für Fachbetriebe, Projektierer und Wiederverkäufer</p>
+          <h1>Verlässliche Solartechnik mit klarer Abwicklung.</h1>
+          <p class="hero-lead">Taosun liefert Solarmodule, Wechselrichter und Zubehör aus Lagerbeständen und selektierten Restposten. Sie erhalten klare Zustandsangaben, saubere Dokumentation und schnelle Antworten auf Verfügbarkeit.</p>
+          <div class="hero-actions">
+            <a href="#angebote" class="btn btn-primary">Produktbestand ansehen</a>
+            <a href="#kontakt" class="btn btn-secondary">Preis &amp; Verfügbarkeit anfragen</a>
+          </div>
+          <ul class="hero-metrics" aria-label="Leistungskennzahlen">
+            <li><strong>24h</strong><span>Antwortzeit im Regelfall</span></li>
+            <li><strong>2022</strong><span>Gründung Taosun GmbH</span></li>
+            <li><strong>EU-weit</strong><span>Logistik nach Absprache</span></li>
+          </ul>
+        </div>
 
-  <section id="about" class="about container" aria-labelledby="about-heading">
-    <div class="about-text">
-      <h2 id="about-heading">Über Taosun</h2>
-      <p>Seit 2022 handeln wir mit neuen und gebrauchten Photovoltaik-Komponenten. Unser Lager umfasst laufend Solarmodule, Wechselrichter sowie Montage- und Installationszubehör – von Dachhaken über Sicherungen bis hin zu Komplettkits. Wir legen Wert auf kompetente Beratung, schlanke Prozesse und faire Konditionen. Profitieren Sie von unserem technischen Know-how und einem europaweiten Logistiknetz.</p>
-    </div>
-    <div class="about-img">
-      <img src="images/installation.png" alt="Photovoltaik-Installation bei Taosun" loading="lazy" />
-    </div>
-  </section>
-
-  <section id="offers" class="offers" aria-labelledby="offers-heading">
-    <div class="container">
-      <h2 id="offers-heading">Aktuelle Angebote</h2>
-      <p class="vat-note">Hinweis: Für viele Photovoltaik-Produkte gilt bei privater Nutzung unter den gesetzlichen Voraussetzungen ein Umsatzsteuersatz von 0 %. Bitte im Einzelfall vor Bestellung prüfen.</p>
-      <div class="offers-grid"></div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact container" aria-labelledby="contact-heading">
-    <h2 id="contact-heading">Kontakt</h2>
-    <div class="contact-grid">
-      <div class="contact-card" aria-label="Direkte Kontaktmöglichkeiten">
-        <h3>Direkt erreichbar</h3>
-        <p>Für Preise, Verfügbarkeit und Mengenanfragen antworten wir in der Regel innerhalb von 24 Stunden.</p>
-        <ul class="contact-list">
-          <li><strong>E-Mail:</strong> <a href="mailto:info@taosun.de">info@taosun.de</a></li>
-          <!-- TODO Jonas: echte Telefonnummer eintragen -->
-          <li><strong>Telefon:</strong> <a href="tel:+490000000000">+49 ... (bitte ergänzen)</a></li>
-        </ul>
-        <address>
-          <strong>Taosun GmbH</strong><br />
-          Georg-Sasse-Straße 24<br />
-          22949 Ammersbek<br />
-          Registergericht Lübeck · HRB 22349 HL
-        </address>
+        <aside class="hero-panel reveal" aria-label="Leistungsversprechen">
+          <p class="panel-kicker">Warum Taosun</p>
+          <h2>Transparenz statt Verkaufsrhetorik.</h2>
+          <ul class="panel-list">
+            <li>Neu- und Lagerware mit nachvollziehbaren Spezifikationen.</li>
+            <li>Fotos und Typenschilder auf Anfrage.</li>
+            <li>Angebot, Rechnung, Versand oder Abholung klar abgestimmt.</li>
+          </ul>
+          <a href="#ablauf" class="text-link">So läuft die Zusammenarbeit</a>
+        </aside>
       </div>
 
-      <form id="inquiry-form" class="inquiry-form" aria-label="Anfrageformular">
-        <h3>Anfrage senden</h3>
-        <label for="name">Name *</label>
-        <input id="name" name="name" type="text" required />
+      <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
+    </section>
 
-        <label for="company">Firma (optional)</label>
-        <input id="company" name="company" type="text" />
+    <section id="leistungen" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Leistungsprofil</p>
+          <h2>Beschaffung und Lieferung aus einer Hand.</h2>
+          <p>Wir konzentrieren uns auf Produktgruppen mit hoher Marktnachfrage und verlässlicher Dokumentation.</p>
+        </div>
 
-        <label for="email">E-Mail *</label>
-        <input id="email" name="email" type="email" required />
+        <div class="pillar-grid">
+          <article class="pillar reveal">
+            <h3>Solarmodule</h3>
+            <p>Mono- und bifaziale Module, darunter Full-Black Varianten und flexible Lösungen für Spezialprojekte.</p>
+          </article>
+          <article class="pillar reveal">
+            <h3>Wechselrichter</h3>
+            <p>Hybrid- und StorEdge-Systeme von etablierten Herstellern mit transparenten Leistungsdaten.</p>
+          </article>
+          <article class="pillar reveal">
+            <h3>Zubehör</h3>
+            <p>Schutz- und Anschlusskomponenten für komplette Installationen, inklusive Mess- und Monitoring-Komponenten.</p>
+          </article>
+          <article class="pillar reveal">
+            <h3>Projektabwicklung</h3>
+            <p>Verfügbarkeit, Staffelpreise und Logistik werden vorab geklärt, damit Einkauf und Montage planbar bleiben.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        <label for="phone">Telefon (optional)</label>
-        <input id="phone" name="phone" type="tel" />
+    <section id="ablauf" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Prozess</p>
+          <h2>So läuft die Abwicklung.</h2>
+        </div>
+        <ol class="workflow">
+          <li class="reveal">
+            <span class="workflow-step">1</span>
+            <h3>Anfrage senden</h3>
+            <p>Sie nennen Produkt, Menge und Zieltermin per Mail oder Formular.</p>
+          </li>
+          <li class="reveal">
+            <span class="workflow-step">2</span>
+            <h3>Angebot erhalten</h3>
+            <p>Sie bekommen ein klar strukturiertes Angebot mit Preis, Zustand und Lieferumfang.</p>
+          </li>
+          <li class="reveal">
+            <span class="workflow-step">3</span>
+            <h3>Auftrag bestätigen</h3>
+            <p>Nach Freigabe organisieren wir Rechnung und Logistik in abgestimmten Schritten.</p>
+          </li>
+          <li class="reveal">
+            <span class="workflow-step">4</span>
+            <h3>Versand oder Abholung</h3>
+            <p>Lieferung oder Abholung erfolgt transparent nach Terminabstimmung.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-        <label for="interest">Produkt / Interesse *</label>
-        <input id="interest" name="interest" type="text" required />
+    <section id="angebote" class="section offers">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Bestandsübersicht</p>
+          <h2>Aktuelle Angebote</h2>
+          <p>Die Übersicht wird aus dem verfügbaren Sortiment aufgebaut. Für Mengenpreise und Chargeninformationen schreiben Sie uns direkt.</p>
+        </div>
 
-        <label for="quantity">Menge (optional)</label>
-        <input id="quantity" name="quantity" type="text" />
+        <div class="inventory-controls reveal" aria-label="Produktfilter">
+          <div class="filter-group" role="tablist" aria-label="Produktkategorien">
+            <button class="filter-chip is-active" type="button" role="tab" aria-selected="true" data-filter="all">Alle</button>
+            <button class="filter-chip" type="button" role="tab" aria-selected="false" data-filter="module">Module</button>
+            <button class="filter-chip" type="button" role="tab" aria-selected="false" data-filter="inverter">Wechselrichter</button>
+            <button class="filter-chip" type="button" role="tab" aria-selected="false" data-filter="accessory">Zubehör</button>
+          </div>
+          <label class="search-field" for="inventory-search">
+            <span>Suche</span>
+            <input id="inventory-search" type="search" placeholder="Produktname oder Spezifikation" autocomplete="off" />
+          </label>
+        </div>
 
-        <label for="message">Nachricht *</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+        <p class="inventory-meta reveal"><strong id="inventory-count">0</strong> Produkte sichtbar</p>
+        <p class="vat-note reveal">Hinweis: Für viele Photovoltaik-Produkte gilt bei privater Nutzung unter den gesetzlichen Voraussetzungen ein Umsatzsteuersatz von 0 % (gemäß § 12 Abs. 3 UStG). Bitte den Einzelfall vor Bestellung prüfen.</p>
+        <div class="offers-grid" aria-live="polite"></div>
+      </div>
+    </section>
 
-        <p class="privacy-note">Datenschutzhinweis: Ihre Angaben werden nicht getrackt und ausschließlich zur Beantwortung Ihrer Anfrage verwendet.</p>
-        <button type="submit" class="btn-cta">Per E-Mail anfragen</button>
-      </form>
-    </div>
-  </section>
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Häufige Fragen aus dem Einkauf.</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item reveal" open>
+            <summary>Wie schnell bekomme ich Rückmeldung?</summary>
+            <p>Im Regelfall innerhalb von 24 Stunden an Werktagen. Bei komplexeren Anfragen erhalten Sie eine Zwischenmeldung mit Zeitfenster.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Erhalte ich eine Rechnung mit ausgewiesenen Angaben?</summary>
+            <p>Ja. Sie erhalten eine ordnungsgemäße Rechnung mit den für den Vorgang relevanten Unternehmensdaten.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Ist Versand möglich?</summary>
+            <p>Ja. Versand oder Abholung werden je nach Menge, Produktart und Zielort individuell abgestimmt.</p>
+          </details>
+          <details class="faq-item reveal">
+            <summary>Wie transparent ist der Produktzustand?</summary>
+            <p>Wir geben Zustand und Spezifikationen klar an. Zusätzliche Fotos oder Typenschildinformationen stellen wir auf Anfrage bereit.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section section-alt">
+      <div class="container contact-grid">
+        <article class="contact-panel reveal" aria-label="Direkte Kontaktinformationen">
+          <p class="eyebrow">Kontakt</p>
+          <h2>Direkter Draht zu Taosun.</h2>
+          <p>Für Preise, Mengen und Verfügbarkeit nutzen Sie am schnellsten E-Mail oder das Formular. Wir antworten strukturiert und ohne lange Schleifen.</p>
+          <ul class="contact-list">
+            <li>
+              <span>E-Mail</span>
+              <a href="mailto:info@taosun.de">info@taosun.de</a>
+            </li>
+            <li>
+              <span>Standort</span>
+              <p>Georg-Sasse-Straße 24<br />22949 Ammersbek</p>
+            </li>
+            <li>
+              <span>Handelsregister</span>
+              <p>HRB 22349 HL, Amtsgericht Lübeck</p>
+            </li>
+            <li>
+              <span>Telefon</span>
+              <p>Aktuell keine Hotline. Bitte per E-Mail anfragen.</p>
+            </li>
+          </ul>
+        </article>
+
+        <form id="inquiry-form" class="inquiry-form reveal" aria-label="Anfrageformular">
+          <h3>Anfrage senden</h3>
+
+          <label for="name">Name *</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="company">Firma (optional)</label>
+          <input id="company" name="company" type="text" />
+
+          <label for="email">E-Mail *</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="phone">Telefon (optional)</label>
+          <input id="phone" name="phone" type="tel" />
+
+          <label for="interest">Produkt / Interesse *</label>
+          <input id="interest" name="interest" type="text" required />
+
+          <label for="quantity">Menge (optional)</label>
+          <input id="quantity" name="quantity" type="text" />
+
+          <label for="message">Nachricht *</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <p class="privacy-note">Datenschutzhinweis: Ihre Angaben werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.</p>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          <button type="submit" class="btn btn-primary">Per E-Mail anfragen</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Taosun GmbH · Georg-Sasse-Straße 24 · 22949 Ammersbek · HRB 22349 HL</p>
-    <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    <div class="container footer-inner">
+      <div>
+        <a href="#start" class="footer-brand">Taosun GmbH</a>
+        <p>Solartechnik, Wechselrichter und Zubehör mit klarer Kommunikation und planbarer Abwicklung.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#angebote">Produkte</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Taosun GmbH · Georg-Sasse-Straße 24 · 22949 Ammersbek</p>
   </footer>
 
-  <a class="mobile-cta" href="#contact">Jetzt anfragen</a>
+  <a class="mobile-cta" href="#kontakt">Jetzt Anfrage senden</a>
 
-  <div class="lightbox" aria-hidden="true">
-    <button class="lb-close" aria-label="Schließen">×</button>
-    <button class="lb-prev" aria-label="Vorheriges Bild">‹</button>
-    <img class="lb-img" alt="" />
-    <button class="lb-next" aria-label="Nächstes Bild">›</button>
+  <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Produktgalerie">
+    <button class="lb-close" type="button" aria-label="Schließen">×</button>
+    <button class="lb-prev" type="button" aria-label="Vorheriges Bild">‹</button>
+    <figure class="lb-figure">
+      <img class="lb-img" src="" alt="" />
+      <figcaption class="lb-caption"></figcaption>
+    </figure>
+    <button class="lb-next" type="button" aria-label="Nächstes Bild">›</button>
   </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

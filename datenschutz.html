@@ -1,37 +1,109 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Datenschutz | Taosun GmbH</title>
-  <meta name="description" content="Datenschutzhinweise der Taosun GmbH" />
+  <meta name="description" content="Datenschutzhinweise der Taosun GmbH für die Verarbeitung von Kontakt- und Anfragedaten." />
+  <meta name="robots" content="index,follow" />
+  <link rel="icon" href="taosun-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <p>Taosun GmbH · PV-Komponentenhandel aus Ammersbek</p>
+      <a href="mailto:info@taosun.de">info@taosun.de</a>
+    </div>
+  </div>
+
   <header class="navbar" aria-label="Hauptnavigation">
     <div class="container nav-inner">
-      <a href="index.html#hero" class="logo" aria-label="Startseite">
-        <img src="taosun-logo.png" alt="" /> <span>Taosun&nbsp;GmbH</span>
+      <a href="index.html#start" class="logo" aria-label="Startseite">
+        <img src="taosun-logo.png" alt="Taosun Logo" />
+        <span>Taosun GmbH</span>
       </a>
-      <nav class="nav-links" role="navigation">
-        <a href="index.html#hero">Start</a>
-        <a href="index.html#contact">Kontakt</a>
+
+      <button class="nav-toggle" type="button" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="primary-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="primary-nav" class="nav-links" role="navigation">
+        <a href="index.html#leistungen">Leistungen</a>
+        <a href="index.html#angebote">Produkte</a>
+        <a href="index.html#kontakt">Kontakt</a>
         <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
       </nav>
     </div>
   </header>
 
-  <main class="container" style="padding:2rem 0 3rem;">
-    <h1 style="color:#305977;margin-bottom:1rem;">Datenschutz</h1>
-    <p>Wir verarbeiten personenbezogene Daten ausschließlich zur Bearbeitung von Anfragen und zur Kommunikation mit Interessenten und Kunden.</p>
-    <p>Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben nur zur Bearbeitung Ihrer Anfrage verwendet und nicht zu Tracking- oder Werbezwecken genutzt.</p>
-    <p>Sie können Auskunft über gespeicherte Daten sowie Berichtigung oder Löschung im Rahmen der gesetzlichen Vorgaben verlangen. Kontakt: <a href="mailto:info@taosun.de">info@taosun.de</a>.</p>
-    <p>Stand: Februar 2026</p>
+  <main class="legal-main container">
+    <section class="legal-hero reveal">
+      <p class="eyebrow">Rechtliche Informationen</p>
+      <h1>Datenschutz</h1>
+      <p>Wir verarbeiten personenbezogene Daten ausschließlich im erforderlichen Umfang zur Bearbeitung von Anfragen, zur Angebotsabwicklung und zur Kommunikation mit Interessenten und Kunden.</p>
+    </section>
+
+    <section class="legal-card reveal">
+      <h2>1. Verantwortlicher</h2>
+      <p>
+        Taosun GmbH<br />
+        Georg-Sasse-Straße 24<br />
+        22949 Ammersbek<br />
+        E-Mail: <a href="mailto:info@taosun.de">info@taosun.de</a>
+      </p>
+
+      <h2>2. Zweck und Umfang der Datenverarbeitung</h2>
+      <p>Wenn Sie uns per E-Mail oder Formular kontaktieren, verarbeiten wir Ihre Angaben (z. B. Name, Firma, Kontaktdaten, Anfrageinhalt), um Ihre Anfrage zu beantworten und den gewünschten Geschäftsvorgang vorzubereiten.</p>
+      <p>Eine Nutzung zu nicht angefragten Werbezwecken oder für Tracking außerhalb technisch notwendiger Funktionen erfolgt nicht.</p>
+
+      <h2>3. Rechtsgrundlagen</h2>
+      <ul>
+        <li>Art. 6 Abs. 1 lit. b DSGVO für vorvertragliche Maßnahmen und Vertragsabwicklung</li>
+        <li>Art. 6 Abs. 1 lit. f DSGVO für berechtigte Interessen an sicherer und effizienter Kommunikation</li>
+        <li>Art. 6 Abs. 1 lit. c DSGVO zur Erfüllung gesetzlicher Aufbewahrungs- und Nachweispflichten</li>
+      </ul>
+
+      <h2>4. Speicherdauer</h2>
+      <p>Wir speichern personenbezogene Daten nur so lange, wie dies zur Bearbeitung Ihrer Anfrage und zur Erfüllung gesetzlicher Pflichten erforderlich ist. Danach werden die Daten gelöscht oder datenschutzkonform anonymisiert.</p>
+
+      <h2>5. Weitergabe von Daten</h2>
+      <p>Eine Weitergabe erfolgt nur, wenn sie für die Abwicklung notwendig ist (z. B. Versanddienstleister) oder eine gesetzliche Verpflichtung besteht.</p>
+
+      <h2>6. Ihre Rechte</h2>
+      <p>Sie haben im Rahmen der gesetzlichen Voraussetzungen das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch.</p>
+      <p>Außerdem können Sie sich bei einer zuständigen Datenschutzaufsichtsbehörde beschweren.</p>
+
+      <h2>7. Kontakt zum Datenschutz</h2>
+      <p>Für datenschutzbezogene Anliegen schreiben Sie bitte an <a href="mailto:info@taosun.de">info@taosun.de</a>.</p>
+
+      <h2>8. Aktualität dieser Hinweise</h2>
+      <p>Stand: 21. Februar 2026</p>
+    </section>
   </main>
 
   <footer class="footer">
-    <p>© <span id="year">2026</span> Taosun GmbH · Georg-Sasse-Straße 24 · 22949 Ammersbek · HRB 22349 HL</p>
-    <p><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    <div class="container footer-inner">
+      <div>
+        <a href="index.html#start" class="footer-brand">Taosun GmbH</a>
+        <p>Solartechnik, Wechselrichter und Zubehör mit klarer Kommunikation und planbarer Abwicklung.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#angebote">Produkte</a>
+        <a href="index.html#kontakt">Kontakt</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Taosun GmbH · Georg-Sasse-Straße 24 · 22949 Ammersbek</p>
   </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
