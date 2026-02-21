@@ -1,17 +1,6 @@
 const products = [
   {
     category: "module",
-    name: "Trina Vertex S+ 445 Wp (Dual Glass)",
-    specs: "Glas-Glas-Modul • 445 Wp • Bifazial • 108 Half-Cells • Neu",
-    price: "60 € (0 % USt.)",
-    mail: "Trina Vertex S+ 445 Wp",
-    images: [
-      "images/TrinaVertexS445WpDualGlass-1.jpeg",
-      "images/TrinaVertexS445WpDualGlass-2.jpeg"
-    ]
-  },
-  {
-    category: "module",
     name: "Solico 410 Wp Solarmodul",
     specs: "Monokristallines Solarmodul mit 108 Halbzellen, 410 W Leistung • Lager: 80 Stk. • Neu",
     price: "40 € (0 % USt.)",
@@ -85,11 +74,33 @@ const products = [
   },
   {
     category: "inverter",
+    name: "Kostal Plenticore plus 3.0 G2",
+    specs: "Hybrid-Wechselrichter • 3,0 kW • 3-phasig • G2 • Neu • Lager: (bitte eintragen)",
+    price: "399 € (0 % USt.)",
+    mail: "Kostal Plenticore plus 3.0 G2",
+    images: [
+      "images/kostal-plenticore-3-0-g2-1.webp",
+      "images/kostal-plenticore-3-0-g2-2.webp"
+    ]
+  },
+  {
+    category: "inverter",
     name: "Sungrow SH8.0RT (inkl. Meter)",
     specs: "Hybrid-Wechselrichter • 8 kW • Meter im Lieferumfang • Lager: 15 Stk.",
     price: "750 € (0 % USt.)",
     mail: "Sungrow SH8.0RT",
     images: ["images/sungrow-sh6-0rt-1.jpg"]
+  },
+  {
+    category: "inverter",
+    name: "Sungrow SH10.0RT (inkl. Energymeter)",
+    specs: "Hybrid-Wechselrichter • 10 kW • 3-phasig • inkl. Energymeter (Bundle) • Neu • Lager: (bitte eintragen)",
+    price: "Auf Anfrage",
+    mail: "Sungrow SH10.0RT inkl. Energymeter",
+    images: [
+      "images/sungrow-sh10-0rt-1.webp",
+      "images/sungrow-sh10-0rt-2.webp"
+    ]
   },
   {
     category: "inverter",
@@ -159,6 +170,17 @@ const products = [
     images: ["images/MC4-Verlängerungskabel1_4m-1.webp"]
   },
   {
+    category: "accessory",
+    name: "Typ 2 Ladekabel 7,5 m (Mode 3)",
+    specs: "E-Auto Ladekabel • Typ 2 (Mode 3) • 7,5 m • Ausführung lt. Typenschild • Neu • Lager: 19 Stk.",
+    price: "Auf Anfrage",
+    mail: "Typ 2 Ladekabel 7,5 m",
+    images: [
+      "images/type2-kabel-7-5m-1.webp",
+      "images/type2-kabel-7-5m-2.webp"
+    ]
+  },
+  {
     category: "module",
     name: "Heckert NeMo 4.2 80M 400 Wp",
     specs: "Monokristall-Modul • 400 Wp • deutscher Hersteller • Lager: 400 Stk.",
@@ -172,7 +194,7 @@ const products = [
   {
     category: "module",
     name: "Sunman eArc 430 Wp (flexibel)",
-    specs: "Ultraleichtes, glasloses Flex-Modul • 430 Wp • Lager: 330 Stk.",
+    specs: "Flex-Modul (glaslos) • 430 Wp • ultra-leicht (~7,3 kg) • Neu • Lager: 330 Stk.",
     price: "180 € (0 % USt.)",
     mail: "Sunman eArc 430 Wp flexibel",
     images: [
