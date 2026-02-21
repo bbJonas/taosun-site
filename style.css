@@ -242,6 +242,7 @@ a {
 .filter-chip:focus-visible,
 .search-field input:focus-visible,
 .inquiry-form input:focus-visible,
+.inquiry-form select:focus-visible,
 .inquiry-form textarea:focus-visible,
 .offer-image-wrap:focus-visible,
 .lb-close:focus-visible,
@@ -608,10 +609,45 @@ a {
   object-fit: cover;
 }
 
+.offer-badges {
+  position: absolute;
+  top: 0.62rem;
+  right: 0.62rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.offer-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.2rem 0.52rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  border: 1px solid transparent;
+  box-shadow: 0 10px 22px -16px rgba(18, 39, 55, 0.75);
+}
+
+.offer-badge-stock {
+  background: rgba(18, 39, 55, 0.9);
+  color: #fff;
+}
+
+.offer-badge-condition {
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--brand-900);
+  border-color: rgba(24, 56, 79, 0.18);
+}
+
 .offer-image-count {
   position: absolute;
   top: 0.6rem;
-  right: 0.6rem;
+  left: 0.6rem;
   background: rgba(18, 39, 55, 0.88);
   color: #fff;
   font-size: 0.72rem;
@@ -799,6 +835,17 @@ a {
   gap: 0.5rem;
 }
 
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.field-group {
+  display: grid;
+  gap: 0.35rem;
+}
+
 .inquiry-form h3 {
   margin: 0 0 0.3rem;
   font-family: var(--font-display);
@@ -813,6 +860,7 @@ a {
 }
 
 .inquiry-form input,
+.inquiry-form select,
 .inquiry-form textarea {
   border: 1px solid rgba(24, 56, 79, 0.24);
   border-radius: 0.74rem;
@@ -1159,6 +1207,10 @@ a {
   .search-field input {
     min-width: 0;
     width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
   }
 
   .footer-inner {

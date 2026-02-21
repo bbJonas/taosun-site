@@ -228,23 +228,49 @@
         <form id="inquiry-form" class="inquiry-form reveal" aria-label="Anfrageformular">
           <h3>Anfrage senden</h3>
 
-          <label for="name">Name *</label>
-          <input id="name" name="name" type="text" required />
+          <div class="form-row">
+            <div class="field-group">
+              <label for="name">Name *</label>
+              <input id="name" name="name" type="text" required />
+            </div>
+            <div class="field-group">
+              <label for="company">Firma (optional)</label>
+              <input id="company" name="company" type="text" />
+            </div>
+          </div>
 
-          <label for="company">Firma (optional)</label>
-          <input id="company" name="company" type="text" />
+          <div class="form-row">
+            <div class="field-group">
+              <label for="email">E-Mail *</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div class="field-group">
+              <label for="phone">Telefon (optional)</label>
+              <input id="phone" name="phone" type="tel" />
+            </div>
+          </div>
 
-          <label for="email">E-Mail *</label>
-          <input id="email" name="email" type="email" required />
-
-          <label for="phone">Telefon (optional)</label>
-          <input id="phone" name="phone" type="tel" />
+          <div class="form-row">
+            <div class="field-group">
+              <label for="plz">PLZ (optional)</label>
+              <input id="plz" name="plz" type="text" inputmode="numeric" />
+            </div>
+            <div class="field-group">
+              <label for="shipping_mode">Versand/Abholung</label>
+              <select id="shipping_mode" name="shipping_mode">
+                <option value="">Bitte auswählen</option>
+                <option value="Versand">Versand</option>
+                <option value="Abholung">Abholung</option>
+                <option value="Noch offen">Noch offen</option>
+              </select>
+            </div>
+          </div>
 
           <label for="interest">Produkt / Interesse *</label>
           <input id="interest" name="interest" type="text" required />
 
-          <label for="quantity">Menge (optional)</label>
-          <input id="quantity" name="quantity" type="text" />
+          <label for="desired_quantity">Gewünschte Menge (optional)</label>
+          <input id="desired_quantity" name="desired_quantity" type="text" />
 
           <label for="message">Nachricht *</label>
           <textarea id="message" name="message" rows="5" required></textarea>

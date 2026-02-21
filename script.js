@@ -253,6 +253,20 @@ function getCategoryLabel(category) {
   return CATEGORY_LABELS[category] || "Sonstiges";
 }
 
+function extractStockCount(specs) {
+  const match = specs.match(/Lager:\s*([0-9]+)\s*Stk\./i);
+  return match ? match[1] : "";
+}
+
+function hasNewCondition(specs) {
+  return /\bNeu\b/i.test(specs);
+}
+
+function getCardCtaLabel(category) {
+  if (category === "module") return "Preis pro Stück anfragen";
+  return "Mengen & Verfügbarkeit anfragen";
+}
+
 function getVisibleProducts() {
   const query = searchInput ? normalize(searchInput.value.trim()) : "";
 
@@ -277,6 +291,9 @@ function getVisibleProducts() {
 
 function buildProductCard(product, index) {
   const mailSubject = encodeURIComponent(`Anfrage ${product.mail}`);
+  const ctaLabel = getCardCtaLabel(product.category);
+  const stockCount = extractStockCount(product.specs);
+  const isNew = hasNewCondition(product.specs);
   const mailBody = encodeURIComponent(
     `Guten Tag,\n\nich interessiere mich für "${product.name}". Bitte senden Sie mir Preis und Verfügbarkeit.\n\nVielen Dank.`
   );
@@ -284,6 +301,10 @@ function buildProductCard(product, index) {
   return `
     <article class="offer-card reveal" data-product-index="${index}">
       <button class="offer-image-wrap" type="button" data-open-lightbox="true" aria-label="Bilder zu ${escapeHtml(product.name)} öffnen">
+        <div class="offer-badges">
+          ${stockCount ? `<span class="offer-badge offer-badge-stock">Lager ${escapeHtml(stockCount)} Stk.</span>` : ""}
+          ${isNew ? `<span class="offer-badge offer-badge-condition">Neu</span>` : ""}
+        </div>
         <img class="offer-image" src="${escapeHtml(product.images[0])}" alt="${escapeHtml(product.name)}" loading="lazy" />
         ${product.images.length > 1 ? `<span class="offer-image-count">${product.images.length} Fotos</span>` : ""}
       </button>
@@ -294,7 +315,7 @@ function buildProductCard(product, index) {
       </div>
       <div class="offer-footer">
         <p class="offer-price">${escapeHtml(product.price)}</p>
-        <a class="btn btn-secondary" href="mailto:info@taosun.de?subject=${mailSubject}&body=${mailBody}">Anfragen</a>
+        <a class="btn btn-secondary" href="mailto:info@taosun.de?subject=${mailSubject}&body=${mailBody}">${ctaLabel}</a>
       </div>
     </article>
   `;
@@ -481,8 +502,10 @@ function setupInquiryForm() {
     const company = (data.get("company") || "").toString().trim();
     const email = (data.get("email") || "").toString().trim();
     const phone = (data.get("phone") || "").toString().trim();
+    const plz = (data.get("plz") || "").toString().trim();
+    const shippingMode = (data.get("shipping_mode") || "").toString().trim();
     const interest = (data.get("interest") || "").toString().trim();
-    const quantity = (data.get("quantity") || "").toString().trim();
+    const desiredQuantity = (data.get("desired_quantity") || "").toString().trim();
     const message = (data.get("message") || "").toString().trim();
 
     const subject = `Anfrage ${interest || "Photovoltaik"}`;
@@ -491,8 +514,10 @@ function setupInquiryForm() {
       `Firma: ${company || "-"}`,
       `E-Mail: ${email || "-"}`,
       `Telefon: ${phone || "-"}`,
+      `PLZ: ${plz || "-"}`,
+      `Versand/Abholung: ${shippingMode || "-"}`,
       `Produkt/Interesse: ${interest || "-"}`,
-      `Menge: ${quantity || "-"}`,
+      `Gewuenschte Menge: ${desiredQuantity || "-"}`,
       "",
       "Nachricht:",
       message || "-"
