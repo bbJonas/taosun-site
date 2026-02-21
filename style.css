@@ -297,24 +297,29 @@ a {
   z-index: 1;
 }
 
+.hero-copy {
+  max-width: 41rem;
+}
+
 .hero-copy h1 {
-  margin: 0.72rem 0 0.95rem;
+  margin: 0.62rem 0 0.62rem;
   font-family: var(--font-display);
   color: var(--brand-950);
   line-height: 1.05;
-  font-size: clamp(2rem, 5vw, 4rem);
-  max-width: 18ch;
+  font-size: clamp(2rem, 4.8vw, 3.8rem);
+  max-width: 14ch;
 }
 
 .hero-lead {
   margin: 0;
-  max-width: 66ch;
+  max-width: 52ch;
   color: var(--text-700);
-  font-size: clamp(1rem, 2vw, 1.17rem);
+  font-size: clamp(0.98rem, 1.7vw, 1.08rem);
+  line-height: 1.55;
 }
 
 .hero-actions {
-  margin-top: 1.35rem;
+  margin-top: 1.12rem;
   display: flex;
   align-items: center;
   gap: 0.72rem;
@@ -322,11 +327,11 @@ a {
 }
 
 .hero-metrics {
-  margin: 1.5rem 0 0;
+  margin: 1.2rem 0 0;
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.68rem;
 }
 
@@ -347,6 +352,13 @@ a {
 .hero-metrics span {
   font-size: 0.83rem;
   color: var(--text-700);
+}
+
+.hero-cred {
+  margin: 0.82rem 0 0;
+  color: var(--text-500);
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
 }
 
 .hero-panel {
